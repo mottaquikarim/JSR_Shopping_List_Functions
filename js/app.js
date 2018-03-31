@@ -5,7 +5,7 @@
 		@param item {string}
 		@param price {number}
 		@returns {object}
-		@description 
+		@description
 			given an item and a price, return
 			an object that looks like this:
 			{
@@ -49,7 +49,7 @@
 			list is to DEFAULT to []
 			OPTIONAL:
 				- validate that the item is indeed a shoppingList item
-				- if shoppingList item is not passed in, throw error 
+				- if shoppingList item is not passed in, throw error
 	*/
 
 	// implement function here
@@ -439,7 +439,7 @@
 		@param list {array, []}
 		@returns list
 		@description
-			- *EACH* item in `items` must be an object 
+			- *EACH* item in `items` must be an object
 			that looks like this:
 			{
 				'item': 'eggs',
@@ -521,13 +521,13 @@
 		@returns list
 		@description
 			given two lists of items
-			- *EACH* item in `items` must be an object 
+			- *EACH* item in `items` must be an object
 			that looks like this:
 			{
 				'item': 'eggs',
 				'price': 1.59
 			} (else throw error)
-			- return ONE list that contains items in 
+			- return ONE list that contains items in
 			items1 THEN items in items2 as a single array
 	*/
 
@@ -548,7 +548,7 @@
 		});
 
 		it('should return single list with items of both lists', () => {
-			const newList = combineLists([{
+			const list = combineLists([{
 					'item': 'test',
 					'price': 1,
 				}], [{
@@ -557,9 +557,9 @@
 				}]);
 
 			chai.assert.equal(list[0].item, 'test')
-			chai.assert.equal(list[0].price, 1)	
+			chai.assert.equal(list[0].price, 1)
 			chai.assert.equal(list[1].item, 'test2')
-			chai.assert.equal(list[1].price, 2)	
+			chai.assert.equal(list[1].price, 2)
 		});
 	});
 
@@ -570,17 +570,17 @@
 		@returns list
 		@description
 			given a number i that is within bounds of
-			`list`, break it into two lists where 
+			`list`, break it into two lists where
 			`list1` has all items less than or equal to i
 			and `list2` has all items > i
-			- if `i` < 0, `list1` has all items and `list2` 
+			- if `i` < 0, `list1` has all items and `list2`
 				is empty list
-			- if `i` > length of list, list1 is empty and `list2` 
+			- if `i` > length of list, list1 is empty and `list2`
 				has all items
-			
+
 			- always return a list that looks like this:
 				[list1, list2]
-		
+
 	*/
 
 	// implement function here
@@ -595,12 +595,12 @@
 					'item': 'test2',
 					'price': 2,
 				}]);
-			
+
 			chai.assert.equal(list1[0].item, 'test')
-			chai.assert.equal(list1[0].price, 1)	
+			chai.assert.equal(list1[0].price, 1)
 			chai.assert.equal(list1[1].item, 'test2')
 			chai.assert.equal(list1[1].price, 2)
-			chai.assert.equal(list2.length, 0)	
+			chai.assert.equal(list2.length, 0)
 
 		});
 
@@ -612,12 +612,12 @@
 					'item': 'test2',
 					'price': 2,
 				}]);
-			
+
 			chai.assert.equal(list1[0].item, 'test')
-			chai.assert.equal(list1[0].price, 1)	
+			chai.assert.equal(list1[0].price, 1)
 			chai.assert.equal(list1[1].item, 'test2')
 			chai.assert.equal(list1[1].price, 2)
-			chai.assert.equal(list2.length, 0)	
+			chai.assert.equal(list2.length, 0)
 
 		});
 
@@ -629,13 +629,13 @@
 					'item': 'test2',
 					'price': 2,
 				}]);
-			
-			chai.assert.equal(list1.length, 0)	
+
+			chai.assert.equal(list1.length, 0)
 			chai.assert.equal(list2[0].item, 'test')
-			chai.assert.equal(list2[0].price, 1)	
+			chai.assert.equal(list2[0].price, 1)
 			chai.assert.equal(list2[1].item, 'test2')
 			chai.assert.equal(list2[1].price, 2)
-			
+
 
 		});
 
@@ -661,7 +661,7 @@
 		@description
 			if there are fewer than 10 items
 			in list, return true
-	*/	
+	*/
 
 	// implement function here
 
@@ -742,7 +742,7 @@
 			chai.assert.equal(Math.floor(100*sum)/100, 3.3);
 		});
 	});
-	
+
 	/* 15
 		@function computeSumInRange
 		@param i {number}
@@ -756,7 +756,7 @@
 				'price': 1.59
 			}
 			- sum all the price items FROM start index `i` and
-				end index `j` and return value 
+				end index `j` and return value
 			- if i > j, throw error
 			- if i or j not in range, throw error
 	*/
@@ -804,7 +804,7 @@
 			]);
 
 			chai.assert.equal(sum, 9)
-		})		
+		})
 	});
-	
+
 })();
