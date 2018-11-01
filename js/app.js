@@ -688,7 +688,7 @@
 				[list1, list2]
 
 	*/
-
+		
 	// implement function here
 	const splitListAt = (i, list = []) => { 
 		let newArr = list.slice();
@@ -699,15 +699,13 @@
 		if (i < 0) { 
 			list1 = newArr.slice();
 		} else if (i > list.length){			
-			list2 = newArr.slice();
+			list2 = list.slice();
 		} else {
-			list1 = newArr.slice(0, i + 1)	;
-			list2 = newArr.slice(i + 1, newArr.length -1);
+			list1 = list.slice(0, i + 1)	;
+			list2 = list.slice(i + 1, list.length -1);
 		}
 		
-		newArr[0] = list1;
-		newArr[1] = list2;	
-		return newArr;
+		return [list1, list2];
 	}
 	// TEST
 	describe('11. splitListAt', () => {
